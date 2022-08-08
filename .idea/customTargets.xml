@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CLionExternalBuildManager">
+    <target id="62f7190c-2c11-4b12-8fa2-73e68405c33d" name="fuse" defaultType="MAKE">
+      <configuration id="23dff9d4-3cc7-47e3-b157-1cc7d6d0b1ed" name="fuse">
+        <build type="MAKE">
+          <make targetName="fuse" />
+        </build>
+        <clean type="MAKE">
+          <make targetName="clean" />
+        </clean>
+      </configuration>
+    </target>
+  </component>
+</project>

@@ -1,0 +1,15 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/yifan/code/fslab-handout'
+fusermount -zu /home/yifan/myfs
+rm -f *~ *.o fuse
+rm -rf vdisk /home/yifan/myfs
+gcc -Wall   -c -o disk.o disk.c
+echo /home/yifan/code/fslab-handout/Makefile > fuse~
+rm -rf vdisk
+mkdir vdisk
+rm -rf /home/yifan/myfs
+mkdir /home/yifan/myfs
+gcc -Wall -o fuse disk.o fs.c -DFUSE_USE_VERSION=29 -D_FILE_OFFSET_BITS=64 -lfuse
+./fuse -f /home/yifan/myfs
+make: Leaving directory '/home/yifan/code/fslab-handout'
+ 
